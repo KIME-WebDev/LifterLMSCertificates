@@ -3,7 +3,7 @@
  * Plugin Name:       LLSCE Certificate Report
  * Plugin URI:        https://www.llsce.org/
  * Description:       Lets an administrator pick a certificate date range and download an Excel workbook of LifterLMS certificate earners with their license, state, and pharmacist details resolved per certificate.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            KIME WebDev
@@ -13,7 +13,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'LLSCE_CR_VERSION', '1.0.0' );
+define( 'LLSCE_CR_VERSION', '1.0.1' );
 define( 'LLSCE_CR_FILE', __FILE__ );
 define( 'LLSCE_CR_DIR', plugin_dir_path( __FILE__ ) );
 

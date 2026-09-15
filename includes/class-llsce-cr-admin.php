@@ -37,12 +37,14 @@ class LLSCE_CR_Admin {
 		return (string) apply_filters( 'llsce_cr_capability', 'manage_options' );
 	}
 
+	/**
+	 * Always under Tools; also under the LifterLMS menu when that plugin is active.
+	 */
 	public function register_menu(): void {
 		$title = __( 'LLSCE Certificate Report', 'llsce-certificate-report' );
 
 		if ( class_exists( 'LifterLMS' ) ) {
 			add_submenu_page( 'lifterlms', $title, __( 'Certificate Report', 'llsce-certificate-report' ), self::capability(), self::SLUG, array( $this, 'render_page' ) );
-			return;
 		}
 
 		add_management_page( $title, $title, self::capability(), self::SLUG, array( $this, 'render_page' ) );
